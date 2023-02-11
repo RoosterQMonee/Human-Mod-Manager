@@ -1,0 +1,11 @@
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\bin\Release\Human Mod Manager.exe.config
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\bin\Release\Human Mod Manager.exe
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\bin\Release\Human Mod Manager.pdb
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.csproj.AssemblyReference.cache
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.csproj.SuggestedBindingRedirects.cache
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human_Mod_Manager.Form1.resources
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human_Mod_Manager.Properties.Resources.resources
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.csproj.GenerateResource.cache
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.csproj.CoreCompileInputs.cache
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.exe
+C:\Users\NoahK\source\repos\Human Mod Manager\Human Mod Manager\obj\Release\Human Mod Manager.pdb
