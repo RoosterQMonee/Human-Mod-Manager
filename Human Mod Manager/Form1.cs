@@ -17,6 +17,7 @@ namespace Human_Mod_Manager
 
         string UnityExplorer = "https://github.com/RoosterQMonee/Human-Touch-Mods/blob/main/UnityExplorer.zip?raw=true";
         string ScriptLoader = "https://github.com/RoosterQMonee/Human-Touch-Mods/blob/main/ScriptLoader.zip?raw=true";
+        string HumanGrav = "https://github.com/RoosterQMonee/Human-Touch-Mods/raw/main/HumanGrav.zip";
 
         #region Mods
 
@@ -26,6 +27,7 @@ namespace Human_Mod_Manager
 
             listBox1.Items.Add("[ DEV ] Unity Explorer");
             listBox1.Items.Add("[ DEV ] Script Loader");
+            listBox1.Items.Add("[ Fun ] Human Grav");
 
             listBox2.Items.Add("Coming Soon! ( hopefully )");
 
@@ -245,15 +247,22 @@ namespace Human_Mod_Manager
             if (path == "")
                 get_game_file_dir();
 
-            System.IO.DirectoryInfo di = new DirectoryInfo(path + "\\BepInEx\\Plugins");
+            try
+            {
+                System.IO.DirectoryInfo di = new DirectoryInfo(path + "\\BepInEx\\Plugins");
 
-            foreach (FileInfo file in di.GetFiles())
-                file.Delete();
+                foreach (FileInfo file in di.GetFiles())
+                    file.Delete();
 
-            foreach (DirectoryInfo dir in di.GetDirectories())
-                dir.Delete(true);
+                foreach (DirectoryInfo dir in di.GetDirectories())
+                    dir.Delete(true);
 
-            listBox3.Items.Add("[ Files ] Deleted all Mods.");
+                listBox3.Items.Add("[ Files ] Deleted all Mods.");
+            }
+            catch
+            {
+                MessageBox.Show("Cannot find mod folder, please run the game or select the game folder.");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -266,8 +275,15 @@ namespace Human_Mod_Manager
             if (path == "")
                 get_game_file_dir();
 
-            Process.Start(path + "\\BepInEx\\plugins");
-            listBox3.Items.Add("[ Files ] Loaded mod folder.");
+            try
+            {
+                Process.Start(path + "\\BepInEx\\plugins");
+                listBox3.Items.Add("[ Files ] Loaded mod folder.");
+            }
+            catch
+            {
+                MessageBox.Show("Cannot find mod folder, please run the game or select the game folder.");
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -297,6 +313,12 @@ namespace Human_Mod_Manager
                         listBox3.Items.Add("[ Plugin ] Downloading ScriptLoader");
 
                         download_plugin(ScriptLoader);
+                        break;
+
+                    case "[ Fun ] Human Grav":
+                        listBox3.Items.Add("[ Plugin ] Downloading Human Grav");
+
+                        download_plugin(HumanGrav);
                         break;
                 }
             }
