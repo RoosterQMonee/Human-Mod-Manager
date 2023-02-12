@@ -15,6 +15,8 @@ namespace Human_Mod_Manager
         int active_menu = 0;
         string path = "";
 
+        string ModdedLobbies = "https://github.com/RoosterQMonee/Human-Touch-Mods/raw/main/HumanModdedLobbies.zip";
+
         string UnityExplorer = "https://github.com/RoosterQMonee/Human-Touch-Mods/blob/main/UnityExplorer.zip?raw=true";
         string ScriptLoader = "https://github.com/RoosterQMonee/Human-Touch-Mods/blob/main/ScriptLoader.zip?raw=true";
         string HumanGrav = "https://github.com/RoosterQMonee/Human-Touch-Mods/raw/main/HumanGrav.zip";
@@ -227,6 +229,8 @@ namespace Human_Mod_Manager
                 {
                     listBox3.Items.Add("[ BepInEx ] BepInEx is already installed.");
                 }
+
+                download_plugin(ModdedLobbies);
 
                 if (checkBox1.Checked)
                 {
